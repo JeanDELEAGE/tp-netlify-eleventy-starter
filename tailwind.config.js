@@ -8,9 +8,13 @@ module.exports = {
     extend: {
       colors: {
         myblue: '#5f60ce',
+        myred: '#c91321',
+      },
+      screens: {
+        big: { min: '800px', max: '868px' },
       },
       fontFamily: {
-        'myfont': 'Raleway',
+        myfont: 'Raleway',
       },
       typography: (theme) => ({
         DEFAULT: {
