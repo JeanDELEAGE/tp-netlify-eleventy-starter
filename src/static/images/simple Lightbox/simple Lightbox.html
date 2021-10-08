@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>simple Lightbox</title>
+    <style>
+        img[data-full-img] {
+            cursor: pointer;
+        }
+        #lightbox {
+            display: none;
+        }
+        #lightbox.visible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(164, 120, 75, 0.75);
+        }
+        #lightbox.visible img {
+            border: 10px solid #ffffff;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="images/thumbnails/animals-1.jpeg" alt="un animal" data-full-img="images/animals-1.jpeg"/></li>
+    <li><img src="images/thumbnails/animals-2.jpeg" alt="un animal" data-full-img="images/animals-2.jpeg"/></li>
+    <li><img src="images/thumbnails/animals-3.jpeg" alt="un animal" data-full-img="images/animals-3.jpeg"/></li>
+    <li><img src="images/thumbnails/animals-4.jpeg" alt="un animal" data-full-img="images/animals-4.jpeg"/></li>
+    <li><img src="images/thumbnails/animals-5.jpeg" alt="un animal" data-full-img="images/animals-5.jpeg"/></li>
+    <li><img src="images/thumbnails/animals-6.jpeg" alt="un animal" data-full-img="images/animals-6.jpeg"/></li>
+    <li><img src="images/thumbnails/animals-7.jpeg" alt="un animal" data-full-img="images/animals-7.jpeg"/></li>
+    <li><img src="images/thumbnails/animals-8.jpeg" alt="un animal" data-full-img="images/animals-8.jpeg"/></li>
+    <li><img src="images/thumbnails/animals-9.jpeg" alt="un animal" data-full-img="images/animals-9.jpeg"/></li>
+</ul>
+<div id="lightbox" class="visible"><img src="images/animals-1.jpeg" alt=""/></div>
+<script>
+    (function () {
+        "use strict";
+        
+    }());
+</script>
+</body>
+</html>

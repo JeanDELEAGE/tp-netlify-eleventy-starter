@@ -10,4 +10,18 @@ title: Welcome
         {{ component("headings/title", { content: "Bonjour depuis l'éditeur local !" }) }}
     </div>
 </div>
-<a href="galerie">galerie</a>
+<div x-data="{imageUrl:null}">
+    <ul class="flex">
+        <li class="p-4 flex-grow"><img src="static/images/thumbnails/animals-1.jpeg" alt="animal 1"
+                 @click="imageUrl = 'static/images/animals-1.jpeg';" class="w-full"></li>
+        <li class="p-4 flex-grow"><img src="static/images/thumbnails/animals-2.jpeg" alt="animal 2"
+                 @click="imageUrl = 'static/images/animals-2.jpeg';" class="w-full"></li>
+        <li class="p-4 flex-grow"><img src="static/images/thumbnails/animals-3.jpeg" alt="animal 3"
+                 @click="imageUrl = 'static/images/animals-3.jpeg';" class="w-full"></li>
+        <li class="p-4 flex-grow"><img src="static/images/thumbnails/animals-4.jpeg" alt="animal 4"
+                 @click="imageUrl = 'static/images/animals-4.jpeg';" class="w-full"></li>
+    </ul>
+    <div x-show="!!imageUrl" @click.away="imageUrl=null">
+        <img :src="imageUrl" alt="un animal affiche">
+    </div>
+</div>
